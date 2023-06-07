@@ -5,5 +5,7 @@
 
 [Huli 線上課程首頁](https://lidemy.com/)
 
+帳密: 去跟你的mentor要
+
 ## 流程
 請先 fork 一份專案到自己的github裡面，並且依照週數順序來完成課程

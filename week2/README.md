@@ -1,4 +1,7 @@
 # Javascript
+1. 完成本週課程  
+2. 寫作業  
+3. 寫心得   
 
 [Javascript JS101 課程連結](https://lidemy.com/p/git101)
 

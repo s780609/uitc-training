@@ -12,4 +12,5 @@
 
 ## 問題
 有問題的話，而你的mentor又不在，又感覺同事都凶神惡煞(或是他們都在忙)，不敢問的話，可以在 issue 那裏開一個 新 issue，詳細描述你遇到的困難或是問題   
-![](https://hackmd.io/_uploads/HkY0gGR8h.png)
+
+![issue example](https://hackmd.io/_uploads/HkY0gGR8h.png)

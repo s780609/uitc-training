@@ -60,7 +60,7 @@ function myFn(input) {
 }
 ```
 
-`return`該行必須往上空一行   
+`return`該行必須往上空一行，除非該scope只有`return`那行  
 ❌
 ```javascript
 function myFn(input) {

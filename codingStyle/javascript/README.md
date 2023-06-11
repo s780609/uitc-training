@@ -102,3 +102,22 @@ const Case = "b";
 // The following declaration creates a query. It does not run
 // the query.
 ```
+
+### 註解上方必須空一行，除非是該scope第一行
+❌
+```javascript
+function test () {
+    const a = "a";
+    // 註解上方要空一行
+    const b = "b";
+}
+```
+✔️
+```javascript
+function test () {
+    const a = "a";
+
+    // 註解上方要空一行
+    const b = "b";
+}
+```

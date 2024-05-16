@@ -121,3 +121,23 @@ function test () {
     const b = "b";
 }
 ```
+
+### 字串請使用雙引號
+❌
+```javascript
+let a = '123';
+```
+✔️
+```javascript
+let a = "123";
+```
+
+### 該段程式碼結尾，要加上分號
+❌
+```javascript
+let a = '123'
+```
+✔️
+```javascript
+let a = "123";
+```

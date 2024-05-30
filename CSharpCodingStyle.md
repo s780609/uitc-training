@@ -175,3 +175,40 @@ public string test (string input) {
     var b = "b";
 }
 ```
+
+### if, else if, else 一律用{}
+❌
+```C#
+bool a = true;
+string b = "";
+if(a == true)
+    b = "b";
+```
+✔️
+```C#
+bool a = true;
+string b = "";
+if(a == true)
+{
+    b = "Ok";
+}
+```
+
+### public method 要加寫 summary 註解 [建議 不強制]
+❌
+```C#
+public string test (string input) {
+    return "OK";
+}
+```
+✔️
+```C#
+/// <summary>
+/// 把說明寫清楚方便別人使用你的方法
+/// </summary>
+/// <param name="input"></param>
+/// <returns>返回處理後的結果，例: 成功 => "Ok"</returns>
+public string test (string input) {
+    return "OK";
+}
+```

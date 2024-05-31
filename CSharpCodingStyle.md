@@ -156,7 +156,7 @@ if(a == true)
 ### public method 要加寫 summary 註解 [建議 不強制]
 ❌
 ```C#
-public string test (string input) {
+public string Test (string input) {
     return "OK";
 }
 ```
@@ -167,7 +167,7 @@ public string test (string input) {
 /// </summary>
 /// <param name="input"></param>
 /// <returns>返回處理後的結果，例: 成功 => "Ok"</returns>
-public string test (string input) {
+public string Test (string input) {
     return "OK";
 }
 ```
@@ -200,7 +200,7 @@ var Case = "b";
 ### 註解上方必須空一行，除非是該scope第一行
 ❌
 ```C#
-public string test (string input) {
+public string Test (string input) {
     var a = "a" + input;
     // 註解上方要空一行
     var b = "b";

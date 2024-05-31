@@ -120,12 +120,14 @@ public void SomeMethod(string input)
 }
 ```
 
-### if, else if, else 一律用{}
+### if, else if, else 一律用{}, 除非只有一個 if
 ❌
 ```C#
 bool a = true;
 string b = "";
 if(a == true)
+    b = "b";
+else if(a == false)
     b = "b";
 ```
 ✔️
@@ -136,6 +138,19 @@ if(a == true)
 {
     b = "Ok";
 }
+else if(a == false)
+{
+    b = "b";
+}
+```
+✔️
+```C#
+bool a = true;
+string b = "";
+
+// 只有一個 if 可以
+if(a == true)
+    b = "b";
 ```
 
 ### public method 要加寫 summary 註解 [建議 不強制]

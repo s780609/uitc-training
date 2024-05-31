@@ -208,7 +208,7 @@ public string test (string input) {
 ```
 ✔️
 ```C#
-public string test (string input) {
+public string Test (string input) {
     var a = "a" + input;
 
     // 註解上方要空一行

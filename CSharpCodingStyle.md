@@ -197,7 +197,7 @@ var Case = "b";
 // the query.
 ```
 
-### 註解上方必須空一行，除非是該scope第一行
+### 註解上方必須空一行，除非是該scope第一行，除非是宣告物件屬性
 ❌
 ```C#
 public string Test (string input) {
@@ -213,5 +213,14 @@ public string Test (string input) {
 
     // 註解上方要空一行
     var b = "b";
+}
+```
+✔️
+```
+var a = new Users()
+{
+    public string Name {get; set;}
+    // 宣告物件時，需要註解，不需要往上方空一行
+    public string Account {get; set;}
 }
 ```

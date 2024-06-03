@@ -120,7 +120,7 @@ public void SomeMethod(string input)
 }
 ```
 
-### if, else if, else 一律用{}, 除非只有一個 if
+### if, else if, else 一律用{}, 除非只有一個 if block且只有一行
 ❌
 ```C#
 bool a = true;
@@ -129,6 +129,15 @@ if(a == true)
     b = "b";
 else if(a == false)
     b = "b";
+```
+❌
+```C#
+if (!businessRelationshipsIsEight)
+    return new ResultDto<CallEaiHubAndValidateDataDto>()
+    {
+        Code = ResponseCode.GetDataButNoRelationContract.ToStringType(),
+        Message = ResponseCode.GetDataButNoRelationContract.ToDescriptionString(),
+    };
 ```
 ✔️
 ```C#
@@ -148,7 +157,7 @@ else if(a == false)
 bool a = true;
 string b = "";
 
-// 只有一個 if 可以
+// 只有一個 if scope 且只有一行
 if(a == true)
     b = "b";
 ```

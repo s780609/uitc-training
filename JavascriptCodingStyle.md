@@ -98,6 +98,26 @@ function myFn(input) {
 }
 ```
 
+### 字串請使用雙引號
+❌
+```javascript
+let a = '123';
+```
+✔️
+```javascript
+let a = "123";
+```
+
+### 該段程式碼結尾，要加上分號
+❌
+```javascript
+let a = '123'
+```
+✔️
+```javascript
+let a = "123";
+```
+
 ## Commenting conventions
 ### 註解(`//`)都必須使用新的一行，不要把註解寫在 code 後面   
 ❌
@@ -140,23 +160,32 @@ function test () {
     const b = "b";
 }
 ```
-
-### 字串請使用雙引號
+#### 但是`VUE`在宣告 `ref` 或 `computed` 或 `import`，可以免除這項規則
 ❌
 ```javascript
-let a = '123';
-```
-✔️
-```javascript
-let a = "123";
+// OtpStatus原始資料
+const OtpStatusData = ref([]);
+const endDateDisplay = ref('');
+const beginDateDisplay = ref('');
+// 依條件篩選
+const filterByNationalId = computed(() => otpStatusData.value.filter((data) => data.nationalId.includes(nationalId.value)));
+const filterByPhone = computed(() => filterByNationalId.value.filter((data) => data.phone.includes(phone.value)));
+const filterByConfirmIP = computed(() => filterByPhone.value.filter((data) => data.confirmIP.includes(confirmIP.value)));
 ```
 
-### 該段程式碼結尾，要加上分號
-❌
-```javascript
-let a = '123'
-```
 ✔️
 ```javascript
-let a = "123";
+// OtpStatus原始資料
+const OtpStatusData = ref([]);
+const endDateDisplay = ref('');
+const beginDateDisplay = ref('');
+// 篩選input
+const nationalId = ref("");
+const phone = ref("");
+const confirmIP = ref("");
+
+// 依條件篩選
+const filterByNationalId = computed(() => otpStatusData.value.filter((data) => data.nationalId.includes(nationalId.value)));
+const filterByPhone = computed(() => filterByNationalId.value.filter((data) => data.phone.includes(phone.value)));
+const filterByConfirmIP = computed(() => filterByPhone.value.filter((data) => data.confirmIP.includes(confirmIP.value)));
 ```

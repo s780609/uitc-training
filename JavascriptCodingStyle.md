@@ -60,13 +60,22 @@ function myFn(input) {
 }
 ```
 
-`return`該行必須往上空一行，除非該scope只有`return`那行  
+`return` 和 `throw` 該行必須往上空一行，除非該scope只有`return` 或 `throw` 那行  
 ❌
 ```javascript
 function myFn(input) {
     let result = "Ok";
     result = "Ok" + input;
     return result;
+}
+```
+❌
+```javascript
+function myFn(input) {
+    if(!input){
+        input = "No";
+        throw new Error(input);
+    }
 }
 ```
 ✔️
@@ -76,6 +85,16 @@ function myFn(input) {
     result = "Ok" + input;
 
     return result;
+}
+```
+✔️
+```javascript
+function myFn(input) {
+    if(!input){
+        input = "No";
+
+        throw new Error(input);
+    }
 }
 ```
 

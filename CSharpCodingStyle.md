@@ -92,7 +92,7 @@ var currentPerformanceCounterCategory = new System.Diagnostics.PerformanceCounte
 不必更改使用 Visual Studio 設計工具創建的對象名稱以適應其他指南。
 
 ## Layout conventions
-`return` 的上方必須空一行，除非是該scope第一行
+`return` 和 `throw` 的上方必須空一行，除非是該scope第一行
 ```C#
 public string SomeMethod(string input)
 {

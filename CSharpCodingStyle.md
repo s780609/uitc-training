@@ -91,6 +91,20 @@ var currentPerformanceCounterCategory = new System.Diagnostics.PerformanceCounte
 ```
 不必更改使用 Visual Studio 設計工具創建的對象名稱以適應其他指南。
 
+### 例外
+當需要建立跟外部的`JSON`字串做轉換的class model時，可以忽略Pascal case和camel case，可以照者外部給予的欄位名稱來建立屬性
+例如有一個外部API給予下列字串
+```Json
+{"msg":"","rc2":"M000"}
+```
+則可以建立物件
+```C#
+public class ResponseModel {
+    public string msg {get;set;}
+    public string rc2 {get;set;}
+}
+```
+
 ## Layout conventions
 `return` 和 `throw` 的上方必須空一行，除非是該scope第一行
 ```C#

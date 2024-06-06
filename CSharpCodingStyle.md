@@ -181,6 +181,16 @@ public string Test (string input) {
 }
 ```
 
+### `var` 使用規則，要可以在後面明顯看到該型別
+❌
+```C#
+var a = GetUser(id);
+```
+✔️
+```C#
+var a = GetUser<Users>(id);
+```
+
 ## Commenting conventions
 
 ### 註解(`//`)都必須使用新的一行，不要把註解寫在 code 後面   

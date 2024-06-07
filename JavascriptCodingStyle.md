@@ -28,7 +28,7 @@ export {
 ```
 
 ## Layout conventions
-宣告一行一行寫   
+### 宣告一行一行寫   
 ❌
 ```javascript
 var name="Eileen", score=25, flag="true";
@@ -40,7 +40,7 @@ var score =25;
 var flag="true";
 ```
 
-請善用 `if return`  
+### 請善用 `if return`  
 ❌
 ```javascript
 function myFn(input) {
@@ -60,7 +60,7 @@ function myFn(input) {
 }
 ```
 
-`return` 和 `throw` 該行必須往上空一行，除非該scope只有`return` 或 `throw` 那行  
+### `return` 和 `throw` 該行必須往上空一行，除非該scope只有`return` 或 `throw` 那行  
 ❌
 ```javascript
 function myFn(input) {

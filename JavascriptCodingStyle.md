@@ -98,6 +98,27 @@ function myFn(input) {
 }
 ```
 
+### function 之間要空一行
+❌
+```javascript
+function getData (){
+	// some code
+}
+const getOtherData = async ()=>{
+	// some code
+}
+```
+✔️
+```javascript
+function getData (){
+	// some code
+}
+
+const getOtherData = async ()=>{
+	// some code
+}
+```
+
 ### 字串請使用雙引號
 ❌
 ```javascript

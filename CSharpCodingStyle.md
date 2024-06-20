@@ -101,7 +101,7 @@ var currentPerformanceCounterCategory = new System.Diagnostics.PerformanceCounte
 ```
 
 Only private fields, local variables and parameters to methods start with a lower-case letter
-```
+```C#
 public class ResponseModel {
     private string messageOne {get;set;}
     private string messageTwo {get;set;}

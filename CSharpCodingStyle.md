@@ -28,8 +28,8 @@ public interface IWorkerQueue
 {
 }
 ```
-在命名類型的公有成員（例如字段、屬性、事件、方法和局部函數）時，使用 Pascal 大小寫。
 
+在命名類型的公有成員（例如字段、屬性、事件、方法和局部函數）時，使用 Pascal 大小寫。
 ```C#
 public class ExampleEvents
 {
@@ -51,6 +51,16 @@ public class ExampleEvents
     }
 }
 ```
+
+私有方法也用 Pascal case
+```
+ // Method
+    private void StartEventProcessing()
+    {
+        // ...
+    }
+```
+
 在編寫位置記錄（positional records）時，對參數使用 Pascal 大小寫，因為它們是記錄的公有屬性。
 
 ```C#
@@ -89,6 +99,19 @@ public T SomeMethod<T>(int someNumber, bool isValid)
 ```C#
 var currentPerformanceCounterCategory = new System.Diagnostics.PerformanceCounterCategory();
 ```
+
+Only private fields, local variables and parameters to methods start with a lower-case letter
+```
+public class ResponseModel {
+    private string messageOne {get;set;}
+    private string messageTwo {get;set;}
+
+    private void TestOne(string first){
+        string firstString = string.Empty;
+    }
+}
+```
+
 不必更改使用 Visual Studio 設計工具創建的對象名稱以適應其他指南。
 
 ### 例外

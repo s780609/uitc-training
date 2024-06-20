@@ -53,7 +53,7 @@ public class ExampleEvents
 ```
 
 私有方法也用 Pascal case
-```
+```C#
  // Method
     private void StartEventProcessing()
     {

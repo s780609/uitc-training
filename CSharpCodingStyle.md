@@ -129,7 +129,7 @@ public class ResponseModel {
 ```
 
 ## Layout conventions
-`return` 和 `throw` 的上方必須空一行，除非是該scope第一行
+`return`, `throw`, `break` 的上方必須空一行，除非是該scope第一行
 ```C#
 public string SomeMethod(string input)
 {
@@ -137,6 +137,19 @@ public string SomeMethod(string input)
 
     return a;
 }
+```
+
+```C#
+if (loanFileUploadInfo != null && loanFileUploadInfo.Count > 0)
+{
+    List<string> jpgList = loanIdFileFolderDirectory.GetFiles().Where(file => loanFileUploadInfo.Any(info => Path.GetFileName(file.FullName) == info.FileName))
+        .Select(file => file.FullName)
+        .ToList();
+
+    dto.Attachments = dto.Attachments.Concat(jpgList).ToList();
+}
+
+break;
 ```
 
 `if` and `for loop` block 結束後，要空一行
